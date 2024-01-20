@@ -10,7 +10,7 @@ tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются в�
 const button = document.getElementById('btn')
 function timer() {
 
-    var seconds = 20;
+    var seconds = 10;
 
     var seconds_timer_id = setInterval(function() {
         if (seconds > 0) {
@@ -18,10 +18,13 @@ function timer() {
             if (seconds < 10) {
                 seconds = "0" + seconds;
             }
-            $(".seconds").text(seconds);
+            // $(".btn").text(seconds);
+            button.textContent = ('Перейти ' + seconds + '...')
         } else {
-            clearInterval(seconds_timer_id);    
+            // clearInterval(seconds_timer_id);
+            button.textContent = ('Продолжить')
+
         }
     }, 1000);
-
 }
+timer()
