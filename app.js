@@ -22,9 +22,14 @@ function timer() {
             button.textContent = ('Перейти ' + seconds + '...')
         } else {
             // clearInterval(seconds_timer_id);
-            button.textContent = ('Продолжить')
+            // button.textContent = ('Продолжить')
+            button.style.display = "none";
+            tg.MainButton.enable()
 
         }
     }, 1000);
 }
 timer()
+Telegram.WebApp.onEvent('mainButtonClicked', function(){
+    telegramAppChatLabs.sendData("Проверяем событие onEvent. Если был клик по кнопке, то отправляем данные при помощи sendData в виде данной строки"); 
+     });
