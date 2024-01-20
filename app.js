@@ -10,7 +10,7 @@ tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются в�
 const button = document.getElementById('btn')
 function timer() {
 
-    var seconds = 10;
+    var seconds = 20;
 
     var seconds_timer_id = setInterval(function() {
         if (seconds > 0) {
