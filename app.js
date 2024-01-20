@@ -6,3 +6,5 @@ tg.MainButton.setText("Changed Text1"); //изменяем текст кнопк
 tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры 
+
+const button = document.getElementById('btn')

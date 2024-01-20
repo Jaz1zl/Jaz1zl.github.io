@@ -26,8 +26,7 @@ body {
 	color: #ffffff;
 	font-size: 18px;
     justify-content: center;
-}
+    display: table-caption;
+    
 
-.button:not(:last-child){
-	margin-bottom: 20px
 }
