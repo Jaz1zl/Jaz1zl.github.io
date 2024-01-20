@@ -12,4 +12,15 @@ body {
 
 .container {
     max-width: 370px;
+
+}
+b.centr{
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+bз.centr{
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
 }
