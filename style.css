@@ -6,8 +6,6 @@ body {
     font-size: 10px;
     margin-left: auto;
     margin-left: auto;
-    /* color: rgb(0, 0, 0); */
-    /* background-color: rgb(255, 255, 255); */
     color: #ffffff;
     background: #ffffff;
 }
@@ -18,14 +16,11 @@ body {
 }
 .b{
     justify-content: center;
-    width: 6em;
-    color: #003b57;
     
 }
 
 .p {
     justify-content: center;
-    width: 4px;
 }
 
 .button{
@@ -33,7 +28,7 @@ body {
 	color: var(--tg-theme-button-text-color);
 	border: none;
 	font-size: 18px;
-    left: 50%;
+    justify-content: center;
 }
 
 .button:not(:last-child){
