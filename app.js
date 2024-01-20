@@ -8,3 +8,20 @@ tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунд�
 tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры 
 
 const button = document.getElementById('btn')
+function timer() {
+
+    var seconds = 20;
+
+    var seconds_timer_id = setInterval(function() {
+        if (seconds > 0) {
+            seconds --;
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            $(".seconds").text(seconds);
+        } else {
+            clearInterval(seconds_timer_id);    
+        }
+    }, 1000);
+
+}
