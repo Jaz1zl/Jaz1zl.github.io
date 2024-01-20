@@ -8,7 +8,7 @@ body {
     margin-left: auto;
     /* color: rgb(0, 0, 0); */
     /* background-color: rgb(255, 255, 255); */
-    color: var(--tg-theme-text-color);
+    color: #ffffff;
     background: #ffffff;
 }
 
@@ -33,4 +33,8 @@ body {
 	color: var(--tg-theme-button-text-color);
 	border: none;
 	font-size: 18px;
+}
+
+.button:not(:last-child){
+	margin-bottom: 20px
 }
