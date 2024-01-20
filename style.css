@@ -25,6 +25,9 @@ body {
 	background: #2096c5;
 	color: #ffffff;
 	font-size: 32px;
+    overflow: hidden;
+    height: max-content;
+    width: 100%;
 }
 .but{
     position: absolute;
