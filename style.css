@@ -33,6 +33,7 @@ body {
 	color: var(--tg-theme-button-text-color);
 	border: none;
 	font-size: 18px;
+    left: 50%;
 }
 
 .button:not(:last-child){
