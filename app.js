@@ -22,9 +22,11 @@ function timer() {
             button.textContent = ('Перейти ' + seconds + '...')
         } else {
             // clearInterval(seconds_timer_id);
-            // button.textContent = ('Продолжить')
-            button.style.display = "none";
+            button.textContent = ('Продолжить')
+            // button.style.display = "none";
             tg.MainButton.enable()
+	        location.href = 'https://t.me/Kino_filming_bot?start';
+
 
         }
     }, 1000);
