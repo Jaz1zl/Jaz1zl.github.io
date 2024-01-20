@@ -16,13 +16,7 @@ body {
     max-width: 370px;
 
 }
-b.centr{
-    margin-left: auto;
-    margin-right: auto;
-    width: 6em
-}
-p.centr{
-    margin-left: auto;
-    margin-right: auto;
+.centr{
+    justify-content: center;
     width: 6em
 }
