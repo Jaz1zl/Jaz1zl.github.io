@@ -9,14 +9,28 @@ body {
     /* color: rgb(0, 0, 0); */
     /* background-color: rgb(255, 255, 255); */
     color: var(--tg-theme-text-color);
-    background: var(--tg-theme-text-color);
+    background: #ffffff;
 }
 
 .container {
     max-width: 370px;
 
 }
-.centr{
+.b{
     justify-content: center;
-    width: 6em
+    width: 6em;
+    color: #00aeff;
+    
+}
+
+.p {
+    justify-content: center;
+    width: 4px;
+}
+
+.button{
+	background: var(--tg-theme-button-color);
+	color: var(--tg-theme-button-text-color);
+	border: none;
+	font-size: 18px;
 }
