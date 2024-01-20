@@ -11,13 +11,13 @@ body {
 
 .container {
     max-width: 370px;
+    text-align: center;
 
 }
 
 
 .centr {
     color: black;
-    justify-content: center;
 }
 
 .button{
