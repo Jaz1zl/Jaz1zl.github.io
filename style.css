@@ -14,12 +14,10 @@ body {
     max-width: 370px;
 
 }
-.b{
-    justify-content: center;
-    
-}
 
-.p {
+
+.centr {
+    color: black;
     justify-content: center;
 }
 
