@@ -56,7 +56,8 @@ button.onclick = function(){
     tg.openLink(meni_1)
 }
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
-    console.log(seconds)
+    // console.log(seconds)
+    tg.showAlert(seconds)
     if (seconds == 0) {
         var meni_1 = 'https://beruma.click/?i=16496';
         tg.openLink(meni_1)
