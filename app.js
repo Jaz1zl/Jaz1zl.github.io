@@ -13,7 +13,7 @@ button.style.display = "none";
 tg.MainButton.show()
 tg.MainButton.enable()
 
-tg.MainButton.setText('Перейти ' + seconds + '...')
+// tg.MainButton.setText('Перейти ' + seconds + '...')
 
 function timer() {
 
@@ -38,10 +38,10 @@ function timer() {
             // clearInterval(seconds_timer_id);
             // button.textContent = ('Продолжить')
             seconds = 0
-            button.style.display = "none";
-            tg.MainButton.enable()
+            // button.style.display = "none";
+            // tg.MainButton.enable()
             tg.MainButton.setText('Продолжить')
-            tg.MainButton.show()
+            // tg.MainButton.show()
 
             // location.href = 'https://t.me/Kino_filming_bot?start';
 
