@@ -6,7 +6,7 @@ tg.MainButton.setText("Changed Text1"); //изменяем текст кнопк
 tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры 
-const seconds = 5;
+var seconds = 5;
 
 const button = document.getElementById('btn')
 button.style.display = "none";
@@ -26,6 +26,7 @@ function timer() {
                 seconds = "0" + seconds;
             }
             // $(".btn").text(seconds);
+
             text = 'Перейти ' + seconds + '...'
             tg.MainButton.setText(text)
             
@@ -50,6 +51,7 @@ function timer() {
     }, 1000);
 }
 timer()
+console.log(timer)
 button.onclick = function(){
     var meni_1 = 'https://beruma.click/?i=16496';
 	// location.href = meni_1;
@@ -63,7 +65,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
         tg.openLink(meni_1)
     
     }
-    tg.sendData('True')
+    // tg.sendData('True')
     WebApp.close();
 
     // telegramAppChatLabs.sendData("Проверяем событие onEvent. Если был клик по кнопке, то отправляем данные при помощи sendData в виде данной строки"); 
