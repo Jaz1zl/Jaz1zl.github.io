@@ -66,7 +66,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
     
     }
     // tg.sendData('True')
-    WebApp.close();
+    tg.close();
 
     // telegramAppChatLabs.sendData("Проверяем событие onEvent. Если был клик по кнопке, то отправляем данные при помощи sendData в виде данной строки"); 
     // tg.sendData('True')
