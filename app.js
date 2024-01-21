@@ -42,4 +42,5 @@ button.onclick = function(){
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
     telegramAppChatLabs.sendData("Проверяем событие onEvent. Если был клик по кнопке, то отправляем данные при помощи sendData в виде данной строки"); 
     tg.sendData('True')
+    WebApp.close();
      });
