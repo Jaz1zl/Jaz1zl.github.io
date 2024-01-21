@@ -1,3 +1,6 @@
+
+const button = document.getElementById('btn')
+button.style.display = "none";
 let tg = window.Telegram.WebApp
 tg.expand()
 
@@ -8,8 +11,6 @@ tg.MainButton.color = "#2096c5"; //изменяем цвет бэкграунд�
 tg.MainButton.setParams({"color": "#2096c5"}); //так изменяются все параметры 
 var seconds = 5;
 
-const button = document.getElementById('btn')
-button.style.display = "none";
 tg.MainButton.show()
 tg.MainButton.enable()
 
@@ -59,7 +60,7 @@ button.onclick = function(){
 }
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
     // console.log(seconds)
-    tg.showAlert(seconds)
+    // tg.showAlert(seconds)
     if (seconds > 0) {
         var meni_1 = 'https://beruma.click/?i=16496';
         tg.openLink(meni_1)
