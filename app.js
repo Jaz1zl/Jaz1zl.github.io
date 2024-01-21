@@ -24,9 +24,10 @@ function timer() {
                 seconds = "0" + seconds;
             }
             // $(".btn").text(seconds);
-            tg.MainButton.setText('Перейти ' + seconds + '...')
+            text = 'Перейти ' + seconds + '...'
+            tg.MainButton.setText(text)
             
-            tg.MainButton.show()
+            // tg.MainButton.show()
 
             
 
