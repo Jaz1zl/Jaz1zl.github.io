@@ -11,6 +11,8 @@ const seconds = 5;
 const button = document.getElementById('btn')
 button.style.display = "none";
 tg.MainButton.show()
+tg.MainButton.enable()
+
 tg.MainButton.setText('Перейти ' + seconds + '...')
 
 function timer() {
@@ -35,6 +37,7 @@ function timer() {
         } else {
             // clearInterval(seconds_timer_id);
             // button.textContent = ('Продолжить')
+            seconds = 0
             button.style.display = "none";
             tg.MainButton.enable()
             tg.MainButton.setText('Продолжить')
