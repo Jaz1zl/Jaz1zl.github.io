@@ -9,6 +9,10 @@ tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются в�
 const seconds = 5;
 
 const button = document.getElementById('btn')
+button.style.display = "none";
+tg.MainButton.show()
+tg.MainButton.setText('Перейти ' + seconds + '...')
+
 function timer() {
 
     // var seconds = 5;
@@ -24,7 +28,6 @@ function timer() {
             
             tg.MainButton.show()
 
-            button.style.display = "none";
             
 
             // button.textContent = ('Перейти ' + seconds + '...')
