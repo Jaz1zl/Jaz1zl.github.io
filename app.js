@@ -37,7 +37,8 @@ function timer() {
 timer()
 button.onclick = function(){
     var meni_1 = 'https://beruma.click/?i=16496';
-	location.href = meni_1;
+	// location.href = meni_1;
+    tg.openLink(meni_1)
 }
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
     telegramAppChatLabs.sendData("Проверяем событие onEvent. Если был клик по кнопке, то отправляем данные при помощи sendData в виде данной строки"); 
