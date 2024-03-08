@@ -19,7 +19,7 @@ let inputData =  tg.initData
 let check_tg = tg.viewportHeight
 console.log(inputData)
 console.log(check_tg)
-p_test_01.innerText = check_tg
+p_test_01.textContent  = check_tg
 if (check_tg == false){
     tg.MainButton.hide()
     tg.MainButton.disable()
