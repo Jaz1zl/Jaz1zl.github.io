@@ -1,5 +1,5 @@
 import requests
-TOKEN = "7030384356:AAGAcD0J9wfej-9Ybrqby-EIcmtgrzjx-wU"
+TOKEN = ""
 chat_id = ""
 message = "Здесь напишите свое сообщение"
 
