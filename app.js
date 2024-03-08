@@ -19,8 +19,8 @@ let inputData =  tg.initData
 let check_tg = tg.viewportHeight
 console.log(inputData)
 console.log(check_tg)
-p_test_01.textContent  = check_tg
-if (check_tg == false){
+if (check_tg != true){
+    p_test_01.innerHTML = check_tg
     tg.MainButton.hide()
     tg.MainButton.disable()
     btn.innerText = "Ошибка открыто не в Telegram";
