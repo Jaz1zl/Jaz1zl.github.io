@@ -47,7 +47,7 @@ function timer() {
         } else {
             seconds = 0
             
-
+            p_test_01.innerHTML = 'Благодарим за просмотр'
             tg.MainButton.setText('Продолжить')
 
         }
