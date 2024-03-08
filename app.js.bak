@@ -13,6 +13,11 @@ var seconds = 20;
 tg.MainButton.show()
 tg.MainButton.enable()
 
+var a=document.createElement('reklama');
+a.href='http://www.google.com';
+var image = document.getElementById('myPicture').getElementsByTagName('img')[0];
+b=a.appendChild(image);
+document.getElementById('myPicture').appendChild(a);
 
 function timer() {
 
@@ -24,7 +29,7 @@ function timer() {
             }
 			console.log(seconds)
             text = 'Перейти ' + seconds + '...'
-            tg.MainButton.setText(text)
+            
         } else {
             seconds = 0
             tg.MainButton.setText('Продолжить')
