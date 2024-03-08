@@ -24,6 +24,7 @@ function timer() {
             }
 			console.log(seconds)
             text = 'Перейти ' + seconds + '...'
+			tg.MainButton.setText(text);
             console.log(text)
         } else {
             seconds = 0
