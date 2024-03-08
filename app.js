@@ -18,7 +18,7 @@ var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
 let inputData =  tg.initData 
 // let check_tg = tg.viewportHeight
 
-let check_tg = tg.initDataUnsafe.user.isBot
+let check_tg =tg.initDataUnsafe.user.last_name
 console.log(inputData)
 console.log(check_tg)
 if (check_tg != true){
