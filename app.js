@@ -9,28 +9,27 @@ tg.MainButton.setText("Перейти 20..."); //изменяем текст к�
 tg.MainButton.textColor = "#ffffff"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#2096c5"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#2096c5"}); //так изменяются все параметры 
-var seconds = 2;
+var seconds = 20;
 
 tg.MainButton.show()
 tg.MainButton.enable()
 var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
 
-let inputData =  tg.initData 
+// let inputData =  tg.initData 
 // let check_tg = tg.viewportHeight
 
-let check_tg =tg.initDataUnsafe.user.last_name
-console.log(inputData)
-console.log(check_tg)
-if (check_tg != true){
-    p_test_01.innerHTML = check_tg
-    tg.MainButton.hide()
-    tg.MainButton.disable()
-    btn.innerText = "Ошибка открыто не в Telegram";
+// let check_tg =tg.initDataUnsafe.user.last_name
+// console.log(inputData)
+// console.log(check_tg)
+// if (check_tg != true){
+//     p_test_01.innerHTML = check_tg
+//     tg.MainButton.hide()
+//     tg.MainButton.disable()
+//     btn.innerText = "Ошибка открыто не в Telegram";
 
-}
-if (check_tg === true){
-    timer()
-}
+// }
+// if (check_tg === true){
+// }
 function timer() {
     // button.localName('test')
     var seconds_timer_id = setInterval(function() {
@@ -54,6 +53,7 @@ function timer() {
         }
     }, 1000);
 }
+timer()
 
 
 btn.onclick = function() {
