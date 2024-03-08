@@ -14,6 +14,7 @@ tg.MainButton.show()
 tg.MainButton.enable()
 
 
+
 function timer() {
 
     var seconds_timer_id = setInterval(function() {
