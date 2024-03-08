@@ -1,6 +1,6 @@
 
 const button = document.getElementById('btn')
-const p_test_01 = document.getElementById('test_01')
+let p_test_01 = document.getElementById('test_01')
 // button.style.display = "none";
 let tg = window.Telegram.WebApp
 tg.expand()
