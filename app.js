@@ -23,7 +23,7 @@ function timer() {
             if (seconds < 10) {
                 seconds = "0" + seconds;
             }
-			Console.log(seconds)
+			console.log(seconds)
             text = 'Перейти ' + seconds + '...'
             tg.MainButton.setText(text)
         } else {
