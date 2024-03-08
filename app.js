@@ -1,7 +1,7 @@
 
 const button = document.getElementById('btn')
 let p_test_01 = document.getElementById('test_01')
-// button.style.display = "none";
+button.style.display = "none";
 let tg = window.Telegram.WebApp
 tg.expand()
 tg.MainButton.text = "Перейти 20..."; //изменяем текст кнопки 
