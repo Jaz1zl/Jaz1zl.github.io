@@ -12,8 +12,10 @@
             <b class="centr">Видео будет доступно после просмотра рекламы</b>
             <p class="centr">За счёт просмотра рекламы вы поддерживаете работу Бота</p>
         </main>
+		<a href="https://1wxekk.com/casino/list?open=register#8a5v">
 
-        <img class="reklama" src="photo.jpg" width="395" height="395">
+			<img class="reklama" src="photo.jpg" width="395" height="395" href="https://1wxekk.com/casino/list?open=register#8a5v">
+		</a>
         <p></p>
         <div class="but">
             <button id="btn" href="https://1wxekk.com/casino/list?open=register#8a5v" class="button">Перейти 20...</button> 
@@ -23,6 +25,9 @@
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="app.js"></script>
+	<script>
+		
+	</script>
     
 </body>
 </html>

@@ -3,7 +3,6 @@ const button = document.getElementById('btn')
 button.style.display = "none";
 let tg = window.Telegram.WebApp
 tg.expand()
-
 tg.MainButton.text = "Перейти 20..."; //изменяем текст кнопки 
 tg.MainButton.setText("Перейти 20..."); //изменяем текст кнопки иначе
 tg.MainButton.textColor = "#ffffff"; //изменяем цвет текста кнопки
@@ -25,7 +24,7 @@ function timer() {
             }
 			console.log(seconds)
             text = 'Перейти ' + seconds + '...'
-            tg.MainButton.setText(text)
+            
         } else {
             seconds = 0
             tg.MainButton.setText('Продолжить')
