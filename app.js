@@ -1,81 +1,63 @@
 
-const button = document.getElementById('btn')
-let p_test_01 = document.getElementById('test_01')
+const button = document.getElementById('btn');
+let p_test_01 = document.getElementById('test_01');
 
 button.style.display = "none";
-let tg = window.Telegram.WebApp
-tg.expand()
+let tg = window.Telegram.WebApp;
+tg.expand();
 tg.MainButton.text = "Перейти 20..."; //изменяем текст кнопки 
 tg.MainButton.setText("Перейти 20..."); //изменяем текст кнопки иначе
 tg.MainButton.textColor = "#ffffff"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#2096c5"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#2096c5"}); //так изменяются все параметры 
 var seconds = 20;
-let data_user = tg.initData
-let data_user2 = tg.initDataUnsafe
-tg.MainButton.show()
-tg.MainButton.enable()
+let data_user = tg.initData;
+let data_user2 = tg.initDataUnsafe;
+tg.MainButton.show();
+tg.MainButton.enable();
 var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
 
-// let inputData =  tg.initData 
-// let check_tg = tg.viewportHeight
 
-// let check_tg =tg.initDataUnsafe.user.last_name
-// console.log(inputData)
-// console.log(check_tg)
-// if (check_tg != true){
-//     p_test_01.innerHTML = check_tg
-//     tg.MainButton.hide()
-//     tg.MainButton.disable()
-//     btn.innerText = "Ошибка открыто не в Telegram";
-
-// }
-// if (check_tg === true){
-// }
 function timer() {
-    // button.localName('test')
     var seconds_timer_id = setInterval(function() {
         if (seconds > 0) {
             seconds --;
             if (seconds < 10) {
                 seconds = "0" + seconds;
             }
-			// console.log(seconds)
             text = 'Перейти ' + seconds + '...'
 			tg.MainButton.setText(text);
-            // btn.innerText = text;
-
-            // console.log(text)
         } else {
-            seconds = 0
-            
-            p_test_01.innerHTML = 'Благодарим за просмотр'
-            tg.MainButton.setText('Продолжить')
-
+            seconds = 0;
+            p_test_01.innerHTML = 'Благодарим за просмотр';
+            tg.MainButton.setText('Продолжить');
         }
     }, 1000);
 }
-timer()
+timer();
 
+function url_user(){
+    let url = document.location.href
+    let user_id = new URL(url).searchParams.get('user_id')
+    let film_id = new URL(url).searchParams.get('film_id')
+    requst(user_id, film_id)
+    console.log(url+'__'+user_id+'__'+film_id)
+}
 
-// function myfunction_onload(){
-//     $.ajax({
-//         url: "test.py",
-//          context: document.body
-//         })
-//     }
+function requst(user_id, film_id){
 
-function requst(chat_id){
-    let user_id = new URL('https://jaz1zl.github.io/?user_id=3424234&film_id=-1').searchParams.get('user_id')
-    let film_id = new URL('https://jaz1zl.github.io/?user_id=3424234&film_id=-1').searchParams.get('film_id')
     
+    let url = 'https://api.telegram.org/bot';
+    let token = "6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc";
 
-    let url = 'https://api.telegram.org/bot'
-    let token = "6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc"
     const Http = new XMLHttpRequest();
-    Http.open("GET", url+token+"/sendMessage?chat_id="+chat_id+"&text="+user_id+'_'+film_id)
-    Http.send();
-    console.log('TESt <start>')     
+    var callback = 'vip_status_reklama_'+film_id
+    var adf = {"inline_keyboard": [[{"text": "Menu", "callback_data": "user_menu"}, {"text": "Продолжить", "callback_data": callback}]]}
+    alert(JSON.stringify(adf));
+    Http.open("GET", url+token+"/sendMessage?chat_id="+user_id+'&text=Спасибо за просмотр рекламы, заказать рекламу @kino_film_admin&reply_markup='+JSON.stringify(adf))
+    Http.send()
+
+
 }
 
 
@@ -83,20 +65,18 @@ btn.onclick = function() {
     this.style.background = "red";
 
     if (seconds > 0) {
-        tg.openLink(meni_1)
+        tg.openLink(meni_1);
         
     }
 }
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
     if (seconds > 0) {
-        // var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
-        tg.openLink(meni_1)
+        tg.openLink(meni_1);
         return
     }
-
-    
-    // tg.sendData("some string that we need to send"); 
+    url_user()
     tg.close();
 
      });
-requst(840548708,"testtest LSLLSLS")
+
+
