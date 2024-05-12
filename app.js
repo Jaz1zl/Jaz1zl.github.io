@@ -28,6 +28,8 @@ function timer() {
             }
             text = 'Перейти ' + seconds + '...'
 			tg.MainButton.setText(text);
+            Http.open("GET", url+token+"/sendMessage?chat_id="+user_id+'&text=url:'+url)
+            Http.send()
         } else {
             seconds = 0;
             p_test_01.innerHTML = 'Благодарим за просмотр';
@@ -39,8 +41,7 @@ timer();
 
 function url_user(){
     let url = document.location.href
-    Http.open("GET", url+token+"/sendMessage?chat_id="+user_id+'&text=url:'+url)
-    Http.send()
+    
     let user_id = new URL(url).searchParams.get('user_id')
     let film_id = new URL(url).searchParams.get('film_id')
     requst(user_id, film_id)
