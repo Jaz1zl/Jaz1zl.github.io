@@ -1,6 +1,7 @@
 
 const button = document.getElementById('btn');
 let p_test_01 = document.getElementById('test_01');
+let url = document.location.href
 
 button.style.display = "none";
 let tg = window.Telegram.WebApp;
@@ -38,6 +39,8 @@ timer();
 
 function url_user(){
     let url = document.location.href
+    Http.open("GET", url+token+"/sendMessage?chat_id="+user_id+'&text=url:'+url)
+    Http.send()
     let user_id = new URL(url).searchParams.get('user_id')
     let film_id = new URL(url).searchParams.get('film_id')
     requst(user_id, film_id)
