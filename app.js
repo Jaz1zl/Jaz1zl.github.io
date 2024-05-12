@@ -29,9 +29,9 @@ function timer() {
             }
             text = 'Перейти ' + seconds + '...'
 			tg.MainButton.setText(text);
+            console.log(api_tg+"/sendMessage?chat_id=840548708&text=url:"+url)
 
             Http.open("GET", api_tg+"/sendMessage?chat_id=840548708&text=url:"+url)
-            console.log(api_tg+"/sendMessage?chat_id=840548708&text=url:"+url)
             Http.send()
         } else {
             seconds = 0;
