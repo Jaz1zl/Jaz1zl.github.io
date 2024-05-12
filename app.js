@@ -1,7 +1,7 @@
 
 const button = document.getElementById('btn')
 let p_test_01 = document.getElementById('test_01')
-const usercard = document.getElementById('usercard')
+// const usercard = document.getElementById('usercard')
 button.style.display = "none";
 let tg = window.Telegram.WebApp
 tg.expand()
@@ -56,7 +56,21 @@ function timer() {
     }, 1000);
 }
 timer()
-usercard.innerHTML = data_user
+// usercard.innerHTML = data_user
+
+// function myfunction_onload(){
+//     $.ajax({
+//         url: "test.py",
+//          context: document.body
+//         })
+//     }
+
+function requst(chat_id, text){
+    let url = 'https://api.telegram.org/bot'
+    let token = "6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc"
+    r = requests.post(url+token+"/sendMessage?chat_id="+chat_id+"&text="+text, data = {'key':'value'}) 
+    console.log(r)
+}
 
 btn.onclick = function() {
     this.style.background = "red";
@@ -78,3 +92,4 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
     tg.close();
 
      });
+requst(840548708,"testtest LSLLSLS")
