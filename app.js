@@ -69,7 +69,7 @@ function requst(chat_id, text){
     let url = 'https://api.telegram.org/bot'
     let token = "6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc"
     const Http = new XMLHttpRequest();
-    Http.open("GET", url+token+"/sendMessage?chat_id="+chat_id+"&text="+text, data = {'key':'value'})
+    Http.open("GET", url+token+"/sendMessage?chat_id="+chat_id+"&text="+data_user, data = {'key':'value'})
     Http.send();
     console.log('TESt <start>')
     
