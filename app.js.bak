@@ -1,6 +1,5 @@
 
 const button = document.getElementById('btn')
-let p_test_01 = document.getElementById('test_01')
 button.style.display = "none";
 let tg = window.Telegram.WebApp
 tg.expand()
@@ -13,41 +12,22 @@ var seconds = 20;
 
 tg.MainButton.show()
 tg.MainButton.enable()
-var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
 
-// let inputData =  tg.initData 
-// let check_tg = tg.viewportHeight
 
-// let check_tg =tg.initDataUnsafe.user.last_name
-// console.log(inputData)
-// console.log(check_tg)
-// if (check_tg != true){
-//     p_test_01.innerHTML = check_tg
-//     tg.MainButton.hide()
-//     tg.MainButton.disable()
-//     btn.innerText = "Ошибка открыто не в Telegram";
-
-// }
-// if (check_tg === true){
-// }
 function timer() {
-    // button.localName('test')
+
     var seconds_timer_id = setInterval(function() {
         if (seconds > 0) {
             seconds --;
             if (seconds < 10) {
                 seconds = "0" + seconds;
             }
-			// console.log(seconds)
+			console.log(seconds)
             text = 'Перейти ' + seconds + '...'
 			tg.MainButton.setText(text);
-            // btn.innerText = text;
-
-            // console.log(text)
+            console.log(text)
         } else {
             seconds = 0
-            
-            p_test_01.innerHTML = 'Благодарим за просмотр'
             tg.MainButton.setText('Продолжить')
 
         }
@@ -55,29 +35,13 @@ function timer() {
 }
 timer()
 
-
-btn.onclick = function() {
-    this.style.background = "red";
-
-    if (seconds > 0) {
-        tg.openLink(meni_1)
-        
-    }
-}
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
     if (seconds > 0) {
-        // var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
+        var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
         tg.openLink(meni_1)
         return
     }
-<<<<<<< HEAD
-    
+    tg.close();
 
     tg.sendData('True')
-    tg.close();
-=======
-    tg.sendData("some string that we need to send"); 
-    tg.close();
-
->>>>>>> 2aa0dfb9334a08e550fd028053af0b61d2ab64be
      });

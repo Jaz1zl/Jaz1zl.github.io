@@ -33,7 +33,7 @@ body {
 .reklama{
     position: static;
 	width: 90%;
-	height: 90%;
+	height: 95%;
 }
 .but{
 
