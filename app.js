@@ -17,6 +17,7 @@ let data_user2 = tg.initDataUnsafe;
 tg.MainButton.show();
 tg.MainButton.enable();
 var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
+let api_tg = 'https://api.telegram.org/bot';
 
 
 function timer() {
@@ -28,7 +29,9 @@ function timer() {
             }
             text = 'Перейти ' + seconds + '...'
 			tg.MainButton.setText(text);
-            Http.open("GET", url+token+"/sendMessage?chat_id="+user_id+'&text=url:'+url)
+            let token = "6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc";
+
+            Http.open("GET", api_tg+token+"/sendMessage?chat_id=840548708&text=url:"+url)
             Http.send()
         } else {
             seconds = 0;
@@ -51,14 +54,13 @@ function url_user(){
 function requst(user_id, film_id){
 
     
-    let url = 'https://api.telegram.org/bot';
     let token = "6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc";
 
     const Http = new XMLHttpRequest();
     var callback = 'vip_status_reklama_'+film_id
     var adf = {"inline_keyboard": [[{"text": "Menu", "callback_data": "user_menu"}, {"text": "Продолжить", "callback_data": callback}]]}
     
-    Http.open("GET", url+token+"/sendMessage?chat_id="+user_id+'&text=Спасибо за просмотр рекламы, заказать рекламу @kino_film_admin&reply_markup='+JSON.stringify(adf))
+    Http.open("GET", api_tg+token+"/sendMessage?chat_id="+user_id+'&text=Спасибо за просмотр рекламы, заказать рекламу @kino_film_admin&reply_markup='+JSON.stringify(adf))
     Http.send()
 
 
