@@ -12,7 +12,7 @@ tg.MainButton.color = "#2096c5"; //изменяем цвет бэкграунд�
 tg.MainButton.setParams({"color": "#2096c5"}); //так изменяются все параметры 
 var seconds = 20;
 let data_user = tg.initData
-
+let data_user2 = tg.initDataUnsafe
 tg.MainButton.show()
 tg.MainButton.enable()
 var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
@@ -69,11 +69,11 @@ function requst(chat_id, text){
     let url = 'https://api.telegram.org/bot'
     let token = "6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc"
     const Http = new XMLHttpRequest();
-    Http.open("GET", url+token+"/sendMessage?chat_id="+chat_id+"&text="+data_user, data = {'key':'value'})
+    Http.open("GET", url+token+"/sendMessage?chat_id="+chat_id+"&text="+data_user2, data = {'key':'value'})
     Http.send();
     console.log('TESt <start>')
     
-    console.log(r)
+        
 }
 
 btn.onclick = function() {
