@@ -2,7 +2,7 @@
 const button = document.getElementById('btn');
 let p_test_01 = document.getElementById('test_01');
 let url = document.location.href
-
+console.log(url)
 button.style.display = "none";
 let tg = window.Telegram.WebApp;
 tg.expand();
