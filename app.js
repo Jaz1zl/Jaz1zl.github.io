@@ -2,7 +2,7 @@
 const button = document.getElementById('btn');
 let p_test_01 = document.getElementById('test_01');
 let url = document.location.href
-console.log(url)
+
 button.style.display = "none";
 let tg = window.Telegram.WebApp;
 tg.expand();
@@ -21,8 +21,7 @@ let api_tg = 'https://api.telegram.org/bot6826593475:AAFLtXKk4NiaUKSHgUaoscUhEda
 const Http = new XMLHttpRequest();
 
 function timer() {
-    Http.open("GET", api_tg+"/sendMessage?chat_id=840548708&text=url:"+url)
-    Http.send()
+
     var seconds_timer_id = setInterval(function() {
         if (seconds > 0) {
             seconds --;
@@ -31,8 +30,6 @@ function timer() {
             }
             text = 'Перейти ' + seconds + '...'
 			tg.MainButton.setText(text);
-            console.log(api_tg+"/sendMessage?chat_id=840548708&text=url:"+url)
-
             
         } else {
             seconds = 0;
@@ -54,9 +51,6 @@ function url_user(){
 
 function requst(user_id, film_id){
 
-    
-
-    
     var callback = 'vip_status_reklama_'+film_id
     var adf = {"inline_keyboard": [[{"text": "Menu", "callback_data": "user_menu"}, {"text": "Продолжить", "callback_data": callback}]]}
     
