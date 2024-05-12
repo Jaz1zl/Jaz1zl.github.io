@@ -9,7 +9,7 @@ tg.MainButton.setText("Перейти 20..."); //изменяем текст к�
 tg.MainButton.textColor = "#ffffff"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#2096c5"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#2096c5"}); //так изменяются все параметры 
-var seconds = 5;
+var seconds = 20;
 
 tg.MainButton.show()
 tg.MainButton.enable()
@@ -40,7 +40,8 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
         tg.openLink(meni_1)
         return
     }
-    tg.close();
+    
 
     tg.sendData('True')
+    tg.close();
      });
