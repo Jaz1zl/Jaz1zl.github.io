@@ -70,14 +70,9 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
         tg.openLink(meni_1)
         return
     }
-<<<<<<< HEAD
-    
 
-    tg.sendData('True')
-    tg.close();
-=======
+    
     tg.sendData("some string that we need to send"); 
     tg.close();
 
->>>>>>> 2aa0dfb9334a08e550fd028053af0b61d2ab64be
      });
