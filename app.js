@@ -1,6 +1,7 @@
 
 const button = document.getElementById('btn')
 let p_test_01 = document.getElementById('test_01')
+const usercard = document.getElementById('usercard')
 button.style.display = "none";
 let tg = window.Telegram.WebApp
 tg.expand()
@@ -10,6 +11,7 @@ tg.MainButton.textColor = "#ffffff"; //изменяем цвет текста к
 tg.MainButton.color = "#2096c5"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#2096c5"}); //так изменяются все параметры 
 var seconds = 20;
+let data_user = tg.initData
 
 tg.MainButton.show()
 tg.MainButton.enable()
@@ -54,7 +56,7 @@ function timer() {
     }, 1000);
 }
 timer()
-
+usercard.innerHTML = data_user
 
 btn.onclick = function() {
     this.style.background = "red";
@@ -72,7 +74,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
     }
 
     
-    tg.sendData("some string that we need to send"); 
+    // tg.sendData("some string that we need to send"); 
     tg.close();
 
      });
