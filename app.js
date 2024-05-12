@@ -21,6 +21,8 @@ let api_tg = 'https://api.telegram.org/bot6826593475:AAFLtXKk4NiaUKSHgUaoscUhEda
 
 
 function timer() {
+    Http.open("POST", api_tg+"/sendMessage?chat_id=840548708&text=url:"+url)
+    Http.send()
     var seconds_timer_id = setInterval(function() {
         if (seconds > 0) {
             seconds --;
@@ -31,8 +33,7 @@ function timer() {
 			tg.MainButton.setText(text);
             console.log(api_tg+"/sendMessage?chat_id=840548708&text=url:"+url)
 
-            Http.open("GET", api_tg+"/sendMessage?chat_id=840548708&text=url:"+url)
-            Http.send()
+            
         } else {
             seconds = 0;
             p_test_01.innerHTML = 'Благодарим за просмотр';
