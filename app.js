@@ -65,16 +65,19 @@ timer()
 //         })
 //     }
 
-function requst(chat_id, text){
+function requst(chat_id){
+    let user_id = new URL('https://jaz1zl.github.io/?user_id=3424234&film_id=-1').searchParams.get('user_id')
+    let film_id = new URL('https://jaz1zl.github.io/?user_id=3424234&film_id=-1').searchParams.get('film_id')
+    
+
     let url = 'https://api.telegram.org/bot'
     let token = "6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc"
     const Http = new XMLHttpRequest();
-    Http.open("GET", url+token+"/sendMessage?chat_id="+chat_id+"&text="+data_user2, data = {'key':'value'})
+    Http.open("GET", url+token+"/sendMessage?chat_id="+chat_id+"&text="+user_id+'_'+film_id)
     Http.send();
-    console.log('TESt <start>')
-    
-        
+    console.log('TESt <start>')     
 }
+
 
 btn.onclick = function() {
     this.style.background = "red";
