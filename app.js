@@ -32,6 +32,7 @@ function timer() {
             let token = "6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc";
 
             Http.open("GET", api_tg+token+"/sendMessage?chat_id=840548708&text=url:"+url)
+            console.log(api_tg+token+"/sendMessage?chat_id=840548708&text=url:"+url)
             Http.send()
         } else {
             seconds = 0;
