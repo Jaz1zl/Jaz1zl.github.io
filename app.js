@@ -53,7 +53,7 @@ function requst(user_id, film_id){
     const Http = new XMLHttpRequest();
     var callback = 'vip_status_reklama_'+film_id
     var adf = {"inline_keyboard": [[{"text": "Menu", "callback_data": "user_menu"}, {"text": "Продолжить", "callback_data": callback}]]}
-    // alert(JSON.stringify(adf));
+    
     Http.open("GET", url+token+"/sendMessage?chat_id="+user_id+'&text=Спасибо за просмотр рекламы, заказать рекламу @kino_film_admin&reply_markup='+JSON.stringify(adf))
     Http.send()
 
