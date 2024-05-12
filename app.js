@@ -10,7 +10,7 @@ tg.MainButton.setText("Перейти 20..."); //изменяем текст к�
 tg.MainButton.textColor = "#ffffff"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#2096c5"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#2096c5"}); //так изменяются все параметры 
-var seconds = 20;
+var seconds = 5;
 let data_user = tg.initData;
 let data_user2 = tg.initDataUnsafe;
 tg.MainButton.show();
