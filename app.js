@@ -41,9 +41,8 @@ function timer() {
 timer();
 
 function url_user(){
-    let url = document.location.href
     Http.open("GET", api_tg+"/sendMessage?chat_id="+user_id+'&text=qqq'+url)
-    
+    Http.send()
     let user_id = new URL(url).searchParams.get('user_id')
     let film_id = new URL(url).searchParams.get('film_id')
     requst(user_id, film_id)
