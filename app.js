@@ -16,9 +16,10 @@ let data_user = tg.initData;
 let data_user2 = tg.initDataUnsafe;
 tg.MainButton.show();
 tg.MainButton.enable();
-var meni_1 = 'https://1wxekk.com/casino/list?open=register#8a5v';
+var meni_1 = 'https://vk.com';
 let api_tg = 'https://api.telegram.org/bot6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc';
 const Http = new XMLHttpRequest();
+var admin_id_tg = 840548708;
 
 function timer() {
 
@@ -32,6 +33,8 @@ function timer() {
 			tg.MainButton.setText(text);
             
         } else {
+            url_user()
+
             seconds = 0;
             p_test_01.innerHTML = 'Благодарим за просмотр';
             tg.MainButton.setText('Продолжить');
@@ -43,7 +46,7 @@ timer();
 function url_user(){
     let user_id = new URL(url).searchParams.get('user_id')
     let film_id = new URL(url).searchParams.get('film_id')
-    Http.open("GET", api_tg+"/sendMessage?chat_id="+user_id+'&text=qqq'+url+'_'+user_id+"_"+film_id)
+    Http.open("GET", api_tg+"/sendMessage?chat_id="+admin_id_tg+'&text=qqq'+url+'_'+user_id+"_"+film_id)
     Http.send()
     
     requst(user_id, film_id)
