@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="app.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_preloader.css">
     <title>Реклама</title>
 </head>
 <body>
-    <div class="container">
-        <main class="centr">
-            <b class="centr">Бета Версия </b>
-            <b class="centr">Видео будет доступно после просмотра рекламы</b>
-            <p class="centr">За счёт просмотра рекламы вы поддерживаете работу Бота</p>
-            <!-- <p class="centr", id="usercard">1</p> -->
-
-        </main>
-		<a href="https://vk.com" target="_blank">
-
-			<img class="reklama" src="photo.jpg" width="395" height="395">
-		</a>
-        <h1 id="test_01"></h1>
-        <div class="but">
-            <button id="btn" href="https://vk.com" class="button">Перейти 20...</button> 
-
+    <div class="preloader" id="preloader"><div class="preloader__loader"> <div class="loadingio-spinner-rolling-nq4q5u6dq7r"><div class="ldio-x2uulkbinbj"><div></div></div></div></div></div>
+    <div class="balance__header">
+        <div class="balance__logo">
+            <h1>Ваш баланс:</h1>
         </div>
-        
+        <span class="h_balance"><img src="rTLo8oEkc.png" alt="" class="moneta_png"><p class="coins">1.000.000.000 </p> <h2>COIN</h2></span>
+        <!-- <div class="balance"> -->
+            
+        <!-- </div> -->
+    </div>  
+    <div class="main">
+        <div class="main--tap">
+            <div class="moneta">
+                <img src="rTLo8oEkc.png" alt="Монетка">
+            </div>
+        </div>
+        <div class="main--ref"></div>
+        <div class="task"></div>
     </div>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="app.js"></script>
-	<script>
-		
-	</script>
-    
+    <div class="footer">
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="#"><img src="ref_ico.png" alt="Рефералы"></a>
+                <a href="#"><img src="rTLo8oEkc.png" alt="TAP" style="width: 18%;"></a>
+                <a href="#"><img src="zad_ico.png" alt="Задания" style="width: 14%;"></a>
+
+            </div>
+        </nav>
+    </div>
+
 </body>
 </html>

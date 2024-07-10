@@ -1,55 +1,22 @@
 
-const button = document.getElementById('btn');
-let p_test_01 = document.getElementById('test_01');
 let url = document.location.href
-
-button.style.display = "none";
 let tg = window.Telegram.WebApp;
 tg.expand();
-tg.MainButton.text = "Перейти 20..."; //изменяем текст кнопки 
-tg.MainButton.setText("Перейти 20..."); //изменяем текст кнопки иначе
-tg.MainButton.textColor = "#ffffff"; //изменяем цвет текста кнопки
-tg.MainButton.color = "#2096c5"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#2096c5"}); //так изменяются все параметры 
-var seconds = 5;
 let data_user = tg.initData;
 let data_user2 = tg.initDataUnsafe;
-tg.MainButton.show();
-tg.MainButton.enable();
-var meni_1 = 'https://vk.com';
 let api_tg = 'https://api.telegram.org/bot6826593475:AAFLtXKk4NiaUKSHgUaoscUhEdai9ZW-Fhc';
 const Http = new XMLHttpRequest();
 var admin_id_tg = 840548708;
 
-function timer() {
-
-    var seconds_timer_id = setInterval(function() {
-        if (seconds > 0) {
-            seconds --;
-            if (seconds < 10) {
-                seconds = "0" + seconds;
-            }
-            text = 'Перейти ' + seconds + '...'
-			tg.MainButton.setText(text);
-            
-        } else {
-            url_user()
-
-            seconds = 0;
-            p_test_01.innerHTML = 'Благодарим за просмотр';
-            tg.MainButton.setText('Продолжить');
-        }
-    }, 1000);
-}
-timer();
 
 function url_user(){
     let user_id = new URL(url).searchParams.get('user_id')
     let film_id = new URL(url).searchParams.get('film_id')
     Http.open("GET", api_tg+"/sendMessage?chat_id="+admin_id_tg+'&text=qqq'+url+'_'+user_id+"_"+film_id)
-    Http.send()
+    // Http.send()
     
-    requst(user_id, film_id)
+    // requst(user_id, film_id)
     console.log(url+'__'+user_id+'__'+film_id)
 }
 
@@ -61,26 +28,46 @@ function requst(user_id, film_id){
     Http.open("GET", api_tg+"/sendMessage?chat_id="+user_id+'&text=Спасибо за просмотр рекламы, заказать рекламу @kino_film_admin&reply_markup='+JSON.stringify(adf))
     Http.send()
 
+}
+
+window.onload = function(){
+
+    setInterval(() => url_user(), 20000);
 
 }
 
-
-btn.onclick = function() {
-    this.style.background = "red";
-
-    if (seconds > 0) {
-        tg.openLink(meni_1);
-        
-    }
-}
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
-    if (seconds > 0) {
-        tg.openLink(meni_1);
-        return
-    }
-    url_user()
+    
     tg.close();
 
      });
 
+document.addEventListener('DOMContentLoaded', ()=>{
+    const divFiles = document.querySelectorAll('div');
+    const imgFiles = document.querySelectorAll('img');
+    const imageFiles = document.querySelectorAll('image');
+    const videoFiles = document.querySelectorAll('video');
+    const linkFiles = document.querySelectorAll('link');
+    let i=0;
+    if(linkFiles){for(l in linkFiles){i++;}}
+    if(videoFiles){for(l in videoFiles){i++;}}
+    if(divFiles){for(l in divFiles){i++;}}
+    if(imgFiles){for(l in imgFiles){i++;}}
+    if(imageFiles){for(l in imageFiles){i++;}}
 
+    Array.from(divFiles).forEach((file, index)=>{
+        file.onload=()=>{i++}   
+    })
+    Array.from(imgFiles).forEach((file, index)=>{
+        file.onload=()=>{i++}   
+    })
+    Array.from(imageFiles).forEach((file, index)=>{
+        file.onload=()=>{i++}   
+    })
+    Array.from(videoFiles).forEach((file, index)=>{
+        file.onload=()=>{i++}   
+    })
+    console.log(i)
+    document.getElementById('preloader').style.display = 'none'
+    
+})
